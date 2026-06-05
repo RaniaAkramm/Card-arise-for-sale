@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardarise.com - The Ultimate Card Domain | For Sale</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            background: #0b0c14;
+            color: #e0e0e0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Top banner */
+        .sale-banner {
+            background: linear-gradient(135deg, #f7971e, #ffd200);
+            color: #0a0a0a;
+            text-align: center;
+            padding: 10px;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .sale-banner a {
+            color: #0a0a0a;
+            text-decoration: underline;
+            font-weight: 800;
+        }
+
+        /* Header */
+        header {
+            padding: 20px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .logo {
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+        .logo span {
+            font-weight: 300;
+            -webkit-text-fill-color: #aaaaaa;
+        }
+        nav a {
+            color: #ccc;
+            margin-left: 25px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.2s;
+        }
+        nav a:hover {
+            color: #4facfe;
+        }
+        .buy-btn {
+            background: #4facfe;
+            color: #0a0a0a !important;
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: 700;
+        }
+        .buy-btn:hover {
+            background: #00c6ff;
+        }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 70px 20px 50px;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff6fd8, #3813c2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        .hero .sub {
+            font-size: 1.4rem;
+            color: #bbb;
+            margin-bottom: 30px;
+        }
+        .hero .badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(255,255,255,0.15);
+            padding: 12px 25px;
+            border-radius: 40px;
+            font-size: 1.2rem;
+            margin: 10px;
+            backdrop-filter: blur(4px);
+        }
+        .hero .price-tag {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffd200;
+            margin: 25px 0 10px;
+        }
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+        .cta {
+            background: white;
+            color: #0a0a0a;
+            padding: 15px 35px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .cta.godaddy {
+            background: #00a63f;
+            color: white;
+        }
+        .cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        /* Sections grid */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 60px 0 30px;
+            font-weight: 700;
+            color: #fff;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: 0.3s;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+        }
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: #4facfe;
+            box-shadow: 0 20px 40px rgba(79, 172, 254, 0.15);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card-content h3 {
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+        .card-content p {
+            color: #aaa;
+            font-size: 0.95rem;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal {
+            background: #14161f;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 24px;
+            max-width: 900px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 30px;
+            position: relative;
+            animation: modalPop 0.3s ease;
+        }
+        @keyframes modalPop {
+            from { transform: scale(0.95); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .modal .close {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 1.8rem;
+            color: #fff;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .modal h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: #4facfe;
+        }
+        .modal .sub-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .modal .sub-images img {
+            width: 120px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #333;
+        }
+        .feature-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .feature-item {
+            background: #1e1f2b;
+            border-radius: 16px;
+            padding: 15px;
+            text-align: center;
+        }
+        .feature-item img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            margin-bottom: 10px;
+        }
+        .feature-item h4 {
+            color: #fff;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin-top: 40px;
+            color: #777;
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav a { margin-left: 12px; font-size: 0.9rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sale-banner">
+        🔥 This premium domain is <strong>FOR SALE</strong> – Inquire: <a href="mailto:cccvcccv3@gmail.com">cccvcccv3@gmail.com</a> | Also listed on <a href="#">GoDaddy/Afternic</a>
+    </div>
+
+    <header class="container">
+        <div class="logo">Cardarise<span>.com</span></div>
+        <nav>
+            <a href="#niches">Niches</a>
+            <a href="#gaming">Gaming</a>
+            <a href="#trading">Trading</a>
+            <a href="#finance">Finance</a>
+            <a href="#contact" class="buy-btn">Buy Domain</a>
+        </nav>
+    </header>
+
+    <section class="hero container">
+        <h1>Cardarise.com</h1>
+        <div class="sub">The One Domain That Rules Every Card Vertical</div>
+        <div class="badge">🎮 Gaming Cards</div>
+        <div class="badge">🃏 Trading Cards</div>
+        <div class="badge">💳 Credit & Debit</div>
+        <div class="badge">🎁 Gift Cards</div>
+        <div class="badge">📇 Digital Business Cards</div>
+        <div class="price-tag">Make an Offer</div>
+        <div class="cta-group">
+            <a href="mailto:cccvcccv3@gmail.com" class="cta">📧 Submit Offer</a>
+            <a href="https://www.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck=cardarise.com" target="_blank" class="cta godaddy">🌐 View on GoDaddy</a>
+        </div>
+    </section>
+
+    <main class="container" id="niches">
+        <h2 class="section-title">🔍 Explore Every Possibility</h2>
+        <div class="grid">
+            <!-- Card 1: Digital Gaming & Gift Cards -->
+            <div class="card" onclick="openModal('modal1')">
+                <img src="https://placehold.co/600x400/1a1c29/ffffff?text=Digital+Game+Cards" alt="Digital Gaming & Gift Cards">
+                <div class="card-content">
+                    <h3>🎮 Digital Store & Gaming Cards</h3>
+                    <p>Steam, PlayStation, Xbox, Google Play, and more – instant delivery platform.</p>
+                </div>
+            </div>
+            <!-- Card 2: Trading Card Games (Yu-Gi-Oh!, Pokémon) -->
+            <div class="card" onclick="openModal('modal2')">
+                <img src="https://placehold.co/600x400/2d1b3a/ffffff?text=Trading+Card+Games" alt="Trading Card Games">
+                <div class="card-content">
+                    <h3>🃏 Trading Card Universe</h3>
+                    <p>Yu-Gi-Oh!, Pokémon, MTG – shop, tier lists, deck builder & price tracker.</p>
+                </div>
+            </div>
+            <!-- Card 3: Credit & Payment Cards -->
+            <div class="card" onclick="openModal('modal3')">
+                <img src="https://placehold.co/600x400/162e4a/ffffff?text=Credit+%26+Debit+Cards" alt="Credit Cards">
+                <div class="card-content">
+                    <h3>💳 Credit & Debit Cards</h3>
+                    <p>Compare, review, and find the best bank cards. Rewards & credit building.</p>
+                </div>
+            </div>
+            <!-- Card 4: Gift Cards Exchange -->
+            <div class="card" onclick="openModal('modal4')">
+                <img src="https://placehold.co/600x400/3a2c1b/ffffff?text=Gift+Card+Marketplace" alt="Gift Card Exchange">
+                <div class="card-content">
+                    <h3>🎁 Gift Card Marketplace</h3>
+                    <p>Buy, sell, and trade gift cards at the best rates. Multi-currency support.</p>
+                </div>
+            </div>
+            <!-- Card 5: Digital Business Cards -->
+            <div class="card" onclick="openModal('modal5')">
+                <img src="https://placehold.co/600x400/1e2b30/ffffff?text=Digital+Business+Cards" alt="Digital Business Cards">
+                <div class="card-content">
+                    <h3>📇 Digital Business Cards</h3>
+                    <p>Modern networking – create, share, and manage NFC/vCard digital cards.</p>
+                </div>
+            </div>
+            <!-- Card 6: Loyalty & Rewards -->
+            <div class="card" onclick="openModal('modal6')">
+                <img src="https://placehold.co/600x400/2a1e3d/ffffff?text=Loyalty+%26+Rewards" alt="Loyalty & Rewards">
+                <div class="card-content">
+                    <h3>⭐ Loyalty & Rewards Hub</h3>
+                    <p>Track points, maximize cashback, and elevate every card benefit.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal1">
+        <div class="modal">
+            <button class="close" onclick="closeModal('modal1')">&times;</button>
+            <h2>🎮 Digital Gaming & Gift Card Store</h2>
+            <p>Cardarise can power a high-converting digital storefront for instant game credits and subscriptions.</p>
+            <div class="sub-images">
+                <img src="https://placehold.co/120x80/0070d1/white?text=PlayStation" alt="PSN">
+                <img src="https://placehold.co/120x80/107c10/white?text=Xbox" alt="Xbox">
+                <img src="https://placehold.co/120x80/000000/white?text=Steam" alt="Steam">
+                <img src="https://placehold.co/120x80/f9ab00/white?text=Google+Play" alt="Google Play">
+                <img src="https://placehold.co/120x80/555555/white?text=Apple" alt="Apple Store">
+                <img src="https://placehold.co/120x80/e50914/white?text=Netflix" alt="Netflix">
+                <img src="https://placehold.co/120x80/1db954/white?text=Spotify" alt="Spotify">
+                <img src="https://placehold.co/120x80/ff4500/white?text=Roblox" alt="Roblox">
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">🛒 Instant digital delivery</div>
+                <div class="feature-item">💱 Multi-currency (SAR, AED, USD)</div>
+                <div class="feature-item">🔔 Price drop alerts</div>
+                <div class="feature-item">📱 Mobile-first checkout</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal2">
+        <div class="modal">
+            <button class="close" onclick="closeModal('modal2')">&times;</button>
+            <h2>🃏 Trading Card Games Hub (Yu-Gi-Oh! & More)</h2>
+            <p>Full ecosystem: card shop, tier list, deck builder, price tracker, and community.</p>
+            <div class="sub-images">
+                <img src="https://placehold.co/120x80/8b5a2b/white?text=Booster+Pack" alt="Booster">
+                <img src="https://placehold.co/120x80/d4af37/white?text=Secret+Rare" alt="Rare Card">
+                <img src="https://placehold.co/120x80/2e4a62/white?text=Tier+List" alt="Tier List">
+                <img src="https://placehold.co/120x80/3a2e1f/white?text=Deck+Builder" alt="Deck Builder">
+                <img src="https://placehold.co/120x80/5a1e3a/white?text=Price+Chart" alt="Price Tracker">
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">🃏 Single Cards & Boosters</div>
+                <div class="feature-item">📊 Live Tier List (TCG/OCG)</div>
+                <div class="feature-item">🛠️ Interactive Deck Builder</div>
+                <div class="feature-item">💰 Real-time Price Tracker</div>
+                <div class="feature-item">🌐 Community Groups & Tournaments</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal3">
+        <div class="modal">
+            <button class="close" onclick="closeModal('modal3')">&times;</button>
+            <h2>💳 Credit & Debit Card Comparison</h2>
+            <p>Cardarise could become the go-to site for finding the perfect payment card.</p>
+            <div class="sub-images">
+                <img src="https://placehold.co/120x80/1a1a2e/ffffff?text=Visa+Platinum" alt="Visa">
+                <img src="https://placehold.co/120x80/eb001b/white?text=Mastercard" alt="Mastercard">
+                <img src="https://placehold.co/120x80/006fcf/white?text=Amex" alt="Amex">
+                <img src="https://placehold.co/120x80/333333/white?text=Cashback" alt="Cashback">
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">📋 Side-by-side comparison</div>
+                <div class="feature-item">⭐ Rewards calculator</div>
+                <div class="feature-item">📈 Credit building tips</div>
+                <div class="feature-item">🔒 Secure reviews</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal4">
+        <div class="modal">
+            <button class="close" onclick="closeModal('modal4')">&times;</button>
+            <h2>🎁 Gift Card Exchange & Marketplace</h2>
+            <p>Turn Cardarise into a trusted P2P market for buying and selling gift cards.</p>
+            <div class="sub-images">
+                <img src="https://placehold.co/120x80/ff9900/white?text=Amazon" alt="Amazon">
+                <img src="https://placehold.co/120x80/00a8e1/white?text=Target" alt="Target">
+                <img src="https://placehold.co/120x80/db4437/white?text=Google" alt="Google">
+                <img src="https://placehold.co/120x80/000/white?text=eBay" alt="eBay">
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">🔄 Instant trade</div>
+                <div class="feature-item">💲 Best rate guarantee</div>
+                <div class="feature-item">🌍 Worldwide brands</div>
+                <div class="feature-item">🛡️ Escrow protection</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal5">
+        <div class="modal">
+            <button class="close" onclick="closeModal('modal5')">&times;</button>
+            <h2>📇 Digital Business Cards</h2>
+            <p>Professional networking redefined. NFC, QR, and virtual cards – all under one domain.</p>
+            <div class="sub-images">
+                <img src="https://placehold.co/120x80/2c3e50/white?text=NFC+Card" alt="NFC">
+                <img src="https://placehold.co/120x80/2980b9/white?text=QR+Share" alt="QR">
+                <img src="https://placehold.co/120x80/8e44ad/white?text=vCard" alt="vCard">
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">📱 Tap & share</div>
+                <div class="feature-item">🎨 Custom designs</div>
+                <div class="feature-item">🔗 Analytics dashboard</div>
+                <div class="feature-item">🔐 CRM integration</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal6">
+        <div class="modal">
+            <button class="close" onclick="closeModal('modal6')">&times;</button>
+            <h2>⭐ Loyalty & Rewards Maximizer</h2>
+            <p>Help users rise their card rewards – track points, miles, and cashback across programs.</p>
+            <div class="sub-images">
+                <img src="https://placehold.co/120x80/f1c40f/white?text=Points" alt="Points">
+                <img src="https://placehold.co/120x80/3498db/white?text=Miles" alt="Miles">
+                <img src="https://placehold.co/120x80/2ecc71/white?text=Cashback" alt="Cashback">
+            </div>
+            <div class="feature-list">
+                <div class="feature-item">📊 Unified dashboard</div>
+                <div class="feature-item">✈️ Travel rewards optimizer</div>
+                <div class="feature-item">🔔 Expiry alerts</div>
+                <div class="feature-item">🏆 Gamified earning</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="container" id="contact">
+        <p style="font-size:1.2rem; color:#fff;">📧 Ready to own <strong>Cardarise.com</strong>?</p>
+        <p>Send your offer to <a href="mailto:cccvcccv3@gmail.com" style="color:#4facfe;">cccvcccv3@gmail.com</a> or find us on GoDaddy Afternic.</p>
+        <p style="margin-top:20px; font-size:0.8rem;">© 2025 Cardarise – Premium domain for sale. All visuals are conceptual.</p>
+    </footer>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        // Close modal when clicking outside content
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
+</body>
+</html>

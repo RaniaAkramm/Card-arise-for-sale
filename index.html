@@ -1,626 +1,727 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-  <title>Cardarise.com – The Card Domain That Rules Everything | For Sale</title>
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Cardarise.com – The Card Domain That Rules Everything | For Sale</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    html {
-      scroll-behavior: smooth;
-    }
+        html {
+            scroll-behavior: smooth;
+        }
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: #ffffff;
-      color: #1e293b;
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1e293b;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-    /* Sticky header */
-    .sticky-header {
-      position: sticky;
-      top: 0;
-      z-index: 999;
-      background: rgba(255, 255, 255, 0.85);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(0,0,0,0.05);
-      padding: 0 24px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 70px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    }
+        /* ---------- TOP ADVERTISEMENT BAR ---------- */
+        .top-ad-bar {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            color: #0f172a;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            border-bottom: 2px solid rgba(255,255,255,0.2);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
 
-    .logo {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 1.8rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #3b82f6, #8b5cf6);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
+        .ad-offer {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-    .logo span {
-      font-weight: 400;
-      -webkit-text-fill-color: #94a3b8;
-    }
+        .ad-offer span {
+            background: rgba(255,255,255,0.25);
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            backdrop-filter: blur(5px);
+        }
 
-    .top-cta {
-      background: linear-gradient(135deg, #3b82f6, #2563eb);
-      color: white;
-      padding: 12px 28px;
-      border-radius: 40px;
-      font-weight: 700;
-      font-size: 0.95rem;
-      text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 10px 25px rgba(59,130,246,0.25);
-      letter-spacing: 0.3px;
-      white-space: nowrap;
-    }
+        .buy-godaddy-btn {
+            background: #ffffff;
+            color: #b45309;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            transition: all 0.3s;
+            display: inline-block;
+        }
 
-    .top-cta:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 15px 35px rgba(59,130,246,0.4);
-    }
+        .buy-godaddy-btn:hover {
+            background: #ffedd5;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
 
-    /* Hero */
-    .hero {
-      background: radial-gradient(circle at 20% 30%, #f0f4ff, #ffffff);
-      padding: 80px 24px 70px;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+        .language-selector {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 30px;
+            padding: 6px 12px;
+            backdrop-filter: blur(5px);
+        }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      width: 500px;
-      height: 500px;
-      background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
-      top: -100px;
-      left: -150px;
-      border-radius: 50%;
-      z-index: 0;
-    }
+        .language-selector select {
+            background: transparent;
+            border: none;
+            color: #0f172a;
+            font-weight: 600;
+            font-size: 0.9rem;
+            outline: none;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
 
-    .hero .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      position: relative;
-      z-index: 1;
-    }
+        .language-selector select option {
+            background: white;
+            color: #0f172a;
+        }
 
-    .hero h1 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: clamp(3rem, 8vw, 5rem);
-      font-weight: 700;
-      background: linear-gradient(135deg, #1e40af, #7c3aed);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      margin-bottom: 20px;
-      line-height: 1.2;
-    }
+        /* ---------- STICKY HEADER ---------- */
+        .sticky-header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+        }
 
-    .hero .tagline {
-      font-size: 1.3rem;
-      color: #475569;
-      margin-bottom: 15px;
-      font-weight: 500;
-    }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
 
-    .badge-row {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 12px;
-      margin: 25px 0;
-    }
+        .logo span {
+            font-weight: 400;
+            -webkit-text-fill-color: #94a3b8;
+        }
 
-    .badge {
-      background: white;
-      border: 1px solid #e2e8f0;
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-weight: 600;
-      font-size: 0.9rem;
-      color: #334155;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-      backdrop-filter: blur(10px);
-    }
+        .header-cta {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 40px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 25px rgba(59,130,246,0.25);
+            letter-spacing: 0.3px;
+            white-space: nowrap;
+        }
 
-    .hero-cta {
-      display: inline-block;
-      margin-top: 20px;
-      background: linear-gradient(135deg, #f97316, #ef4444);
-      color: white;
-      padding: 16px 38px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.15rem;
-      text-decoration: none;
-      box-shadow: 0 15px 35px rgba(249,115,22,0.3);
-      transition: all 0.3s;
-      border: none;
-      letter-spacing: 0.5px;
-    }
+        .header-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 35px rgba(59,130,246,0.4);
+        }
 
-    .hero-cta:hover {
-      transform: scale(1.03);
-      box-shadow: 0 20px 45px rgba(239,68,68,0.4);
-    }
+        /* ---------- HERO ---------- */
+        .hero {
+            background: radial-gradient(circle at 20% 30%, #f0f4ff, #ffffff);
+            padding: 80px 24px 70px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
-    /* Sections */
-    .section {
-      padding: 80px 24px;
-    }
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+            top: -100px;
+            left: -150px;
+            border-radius: 50%;
+            z-index: 0;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
+        .hero .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
 
-    .section-title {
-      text-align: center;
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 20px;
-      color: #0f172a;
-    }
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            background: linear-gradient(135deg, #1e40af, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
 
-    .section-sub {
-      text-align: center;
-      color: #64748b;
-      font-size: 1.1rem;
-      margin-bottom: 50px;
-      max-width: 700px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+        .hero .tagline {
+            font-size: 1.3rem;
+            color: #475569;
+            margin-bottom: 15px;
+            font-weight: 500;
+        }
 
-    /* Category cards */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 28px;
-      margin-top: 30px;
-    }
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin: 25px 0;
+        }
 
-    .cat-card {
-      background: white;
-      border-radius: 28px;
-      overflow: hidden;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.04);
-      transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
-      cursor: pointer;
-      border: 1px solid #f1f5f9;
-    }
+        .badge {
+            background: white;
+            border: 1px solid #e2e8f0;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            color: #334155;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+        }
 
-    .cat-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 30px 60px rgba(59,130,246,0.1);
-      border-color: #cbd5e1;
-    }
+        .hero-cta {
+            display: inline-block;
+            margin-top: 20px;
+            background: linear-gradient(135deg, #f97316, #ef4444);
+            color: white;
+            padding: 16px 38px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.15rem;
+            text-decoration: none;
+            box-shadow: 0 15px 35px rgba(249,115,22,0.3);
+            transition: all 0.3s;
+            border: none;
+            letter-spacing: 0.5px;
+        }
 
-    .cat-card img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-    }
+        .hero-cta:hover {
+            transform: scale(1.03);
+            box-shadow: 0 20px 45px rgba(239,68,68,0.4);
+        }
 
-    .cat-card-body {
-      padding: 24px;
-    }
+        /* ---------- SECTIONS ---------- */
+        .section {
+            padding: 80px 24px;
+        }
 
-    .cat-card-body h3 {
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-      color: #0f172a;
-    }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-    .cat-card-body p {
-      color: #475569;
-      font-size: 0.95rem;
-    }
+        .section-title {
+            text-align: center;
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: #0f172a;
+        }
 
-    /* Modals */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(8px);
-      z-index: 1000;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+        .section-sub {
+            text-align: center;
+            color: #64748b;
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .modal {
-      background: white;
-      border-radius: 32px;
-      max-width: 800px;
-      width: 100%;
-      max-height: 85vh;
-      overflow-y: auto;
-      padding: 32px;
-      position: relative;
-      animation: pop 0.3s ease;
-      box-shadow: 0 40px 80px rgba(0,0,0,0.15);
-    }
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+            margin-top: 30px;
+        }
 
-    @keyframes pop {
-      from { transform: scale(0.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+        .cat-card {
+            background: white;
+            border-radius: 28px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.04);
+            transition: all 0.35s cubic-bezier(0.23, 1, 0.32, 1);
+            cursor: pointer;
+            border: 1px solid #f1f5f9;
+        }
 
-    .modal .close-btn {
-      position: absolute;
-      top: 20px;
-      right: 24px;
-      font-size: 2rem;
-      background: none;
-      border: none;
-      color: #94a3b8;
-      cursor: pointer;
-    }
+        .cat-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 30px 60px rgba(59,130,246,0.1);
+            border-color: #cbd5e1;
+        }
 
-    .modal h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2rem;
-      color: #1e293b;
-      margin-bottom: 12px;
-    }
+        .cat-card img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+        }
 
-    .modal .img-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-      margin: 24px 0;
-      justify-content: center;
-    }
+        .cat-card-body {
+            padding: 24px;
+        }
 
-    .img-strip img {
-      width: 100px;
-      height: 65px;
-      object-fit: cover;
-      border-radius: 12px;
-      border: 1px solid #e2e8f0;
-    }
+        .cat-card-body h3 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
 
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 14px;
-      margin: 24px 0;
-    }
+        .cat-card-body p {
+            color: #475569;
+            font-size: 0.95rem;
+        }
 
-    .feature-item {
-      background: #f8fafc;
-      border-radius: 16px;
-      padding: 16px;
-      text-align: center;
-      font-weight: 500;
-      color: #334155;
-      border: 1px solid #f1f5f9;
-    }
+        /* ---------- MODALS ---------- */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
 
-    /* Bottom ad */
-    .bottom-ad {
-      background: linear-gradient(135deg, #f8fafc, #eff6ff);
-      padding: 60px 24px;
-      text-align: center;
-    }
+        .modal {
+            background: white;
+            border-radius: 32px;
+            max-width: 800px;
+            width: 100%;
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 32px;
+            position: relative;
+            animation: pop 0.3s ease;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.15);
+        }
 
-    .bottom-ad h2 {
-      font-family: 'Space Grotesk', sans-serif;
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
+        @keyframes pop {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
 
-    .bottom-ad p {
-      font-size: 1.1rem;
-      color: #475569;
-      max-width: 500px;
-      margin: 0 auto 25px;
-    }
+        .modal .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            color: #94a3b8;
+            cursor: pointer;
+        }
 
-    .bottom-cta {
-      display: inline-block;
-      background: #3b82f6;
-      color: white;
-      padding: 16px 42px;
-      border-radius: 50px;
-      font-weight: 700;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: 0.3s;
-      box-shadow: 0 15px 35px rgba(59,130,246,0.25);
-    }
+        .modal h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            color: #1e293b;
+            margin-bottom: 12px;
+        }
 
-    .bottom-cta:hover {
-      background: #2563eb;
-      transform: scale(1.04);
-    }
+        .img-strip {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 24px 0;
+            justify-content: center;
+        }
 
-    footer {
-      background: white;
-      border-top: 1px solid #f1f5f9;
-      padding: 30px 24px;
-      text-align: center;
-      color: #94a3b8;
-      font-size: 0.9rem;
-    }
+        .img-strip img {
+            width: 100px;
+            height: 65px;
+            object-fit: cover;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+        }
 
-    /* Responsive */
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2.8rem;
-      }
-      .sticky-header {
-        padding: 0 16px;
-      }
-      .top-cta {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-      }
-    }
-  </style>
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 14px;
+            margin: 24px 0;
+        }
+
+        .feature-item {
+            background: #f8fafc;
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+            font-weight: 500;
+            color: #334155;
+            border: 1px solid #f1f5f9;
+        }
+
+        /* ---------- BOTTOM AD ---------- */
+        .bottom-ad {
+            background: linear-gradient(135deg, #f8fafc, #eff6ff);
+            padding: 60px 24px;
+            text-align: center;
+        }
+
+        .bottom-ad h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        .bottom-ad p {
+            font-size: 1.1rem;
+            color: #475569;
+            max-width: 500px;
+            margin: 0 auto 25px;
+        }
+
+        .bottom-cta {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 16px 42px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: 0.3s;
+            box-shadow: 0 15px 35px rgba(59,130,246,0.25);
+        }
+
+        .bottom-cta:hover {
+            background: #2563eb;
+            transform: scale(1.04);
+        }
+
+        footer {
+            background: white;
+            border-top: 1px solid #f1f5f9;
+            padding: 30px 24px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .top-ad-bar {
+                flex-direction: column;
+                text-align: center;
+                gap: 12px;
+            }
+            .ad-offer {
+                justify-content: center;
+            }
+            .language-selector {
+                width: 100%;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <!-- Top Ad: Sticky Header with CTA -->
-  <header class="sticky-header">
-    <div class="logo">Cardarise<span>.com</span></div>
-    <a href="mailto:cccvcccv3@gmail.com" class="top-cta">🚀 Make an Offer</a>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <h1>Cardarise.com</h1>
-      <p class="tagline">The One Domain That Rises Above Every Card Industry</p>
-      <div class="badge-row">
-        <span class="badge">🎮 Gaming Cards</span>
-        <span class="badge">🃏 Trading Cards</span>
-        <span class="badge">💳 Credit & Debit</span>
-        <span class="badge">🎁 Gift Cards</span>
-        <span class="badge">📇 Digital Business Cards</span>
-        <span class="badge">⭐ Loyalty & Rewards</span>
-      </div>
-      <a href="mailto:cccvcccv3@gmail.com" class="hero-cta">📧 Submit Your Offer Now</a>
-      <p style="margin-top:15px; color:#64748b; font-size:0.9rem;">Serious inquiries only • cccvcccv3@gmail.com</p>
-    </div>
-  </section>
-
-  <!-- Categories Section -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">🔍 Endless Possibilities</h2>
-      <p class="section-sub">Click any category to see how Cardarise can dominate that niche</p>
-      <div class="card-grid">
-        <!-- Card 1 -->
-        <div class="cat-card" onclick="openModal('modal1')">
-          <img src="https://placehold.co/600x400/3b82f6/white?text=🎮+Digital+Game+Cards" alt="Gaming">
-          <div class="cat-card-body">
-            <h3>🎮 Digital Game Store</h3>
-            <p>Instant delivery of PSN, Xbox, Steam, Google Play, Netflix & more.</p>
-          </div>
+    <!-- 🌟 TOP ADVERTISEMENT BAR with Buy on GoDaddy + Offer + Language Switcher -->
+    <div class="top-ad-bar">
+        <div class="ad-offer">
+            <span>🔥 Domain For Sale</span>
+            <a href="https://www.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck=cardarise.com" target="_blank" class="buy-godaddy-btn">🛒 Buy on GoDaddy</a>
         </div>
-        <!-- Card 2 -->
-        <div class="cat-card" onclick="openModal('modal2')">
-          <img src="https://placehold.co/600x400/8b5cf6/white?text=🃏+Trading+Card+Hub" alt="Trading">
-          <div class="cat-card-body">
-            <h3>🃏 Trading Card Universe</h3>
-            <p>Yu-Gi-Oh!, Pokémon, MTG – shop, tier lists, deck builder & tracker.</p>
-          </div>
+        <div class="ad-offer">
+            <span>💎 Make Your Offer: <a href="mailto:cccvcccv3@gmail.com" style="color:#0f172a; text-decoration:underline;">cccvcccv3@gmail.com</a></span>
         </div>
-        <!-- Card 3 -->
-        <div class="cat-card" onclick="openModal('modal3')">
-          <img src="https://placehold.co/600x400/1e3a8a/white?text=💳+Credit+%26+Debit" alt="Credit">
-          <div class="cat-card-body">
-            <h3>💳 Credit & Debit Cards</h3>
-            <p>Compare and review bank cards, rewards, and credit building tools.</p>
-          </div>
+        <div class="language-selector">
+            🌐
+            <select id="languageSelect" aria-label="Change language">
+                <option value="en" data-flag="🇬🇧">🇬🇧 English</option>
+                <option value="ja" data-flag="🇯🇵">🇯🇵 日本語</option>
+                <option value="fr" data-flag="🇫🇷">🇫🇷 Français</option>
+                <option value="de" data-flag="🇩🇪">🇩🇪 Deutsch</option>
+                <option value="ko" data-flag="🇰🇷">🇰🇷 한국어</option>
+                <option value="zh" data-flag="🇨🇳">🇨🇳 中文</option>
+                <option value="ar" data-flag="🇸🇦">🇸🇦 العربية</option>
+            </select>
         </div>
-        <!-- Card 4 -->
-        <div class="cat-card" onclick="openModal('modal4')">
-          <img src="https://placehold.co/600x400/ef4444/white?text=🎁+Gift+Card+Market" alt="Gift">
-          <div class="cat-card-body">
-            <h3>🎁 Gift Card Marketplace</h3>
-            <p>Buy, sell, and exchange gift cards globally – safe & instant.</p>
-          </div>
+    </div>
+
+    <!-- Sticky Header -->
+    <header class="sticky-header">
+        <div class="logo">Cardarise<span>.com</span></div>
+        <a href="mailto:cccvcccv3@gmail.com" class="header-cta">🚀 Make an Offer</a>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Cardarise.com</h1>
+            <p class="tagline">The One Domain That Rises Above Every Card Industry</p>
+            <div class="badge-row">
+                <span class="badge">🎮 Gaming Cards</span>
+                <span class="badge">🃏 Trading Cards</span>
+                <span class="badge">💳 Credit & Debit</span>
+                <span class="badge">🎁 Gift Cards</span>
+                <span class="badge">📇 Digital Business Cards</span>
+                <span class="badge">⭐ Loyalty & Rewards</span>
+            </div>
+            <a href="mailto:cccvcccv3@gmail.com" class="hero-cta">📧 Submit Your Offer Now</a>
+            <p style="margin-top:15px; color:#64748b; font-size:0.9rem;">Serious inquiries only • cccvcccv3@gmail.com</p>
         </div>
-        <!-- Card 5 -->
-        <div class="cat-card" onclick="openModal('modal5')">
-          <img src="https://placehold.co/600x400/10b981/white?text=📇+Digital+Business+Cards" alt="Business">
-          <div class="cat-card-body">
-            <h3>📇 Digital Business Cards</h3>
-            <p>NFC, QR, and vCard solutions for modern networking.</p>
-          </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">🔍 Endless Possibilities</h2>
+            <p class="section-sub">Click any category to see how Cardarise can dominate that niche</p>
+            <div class="card-grid">
+                <div class="cat-card" onclick="openModal('modal1')">
+                    <img src="https://placehold.co/600x400/3b82f6/white?text=🎮+Digital+Game+Cards" alt="Gaming">
+                    <div class="cat-card-body">
+                        <h3>🎮 Digital Game Store</h3>
+                        <p>Instant delivery of PSN, Xbox, Steam, Google Play, Netflix & more.</p>
+                    </div>
+                </div>
+                <div class="cat-card" onclick="openModal('modal2')">
+                    <img src="https://placehold.co/600x400/8b5cf6/white?text=🃏+Trading+Card+Hub" alt="Trading">
+                    <div class="cat-card-body">
+                        <h3>🃏 Trading Card Universe</h3>
+                        <p>Yu-Gi-Oh!, Pokémon, MTG – shop, tier lists, deck builder & tracker.</p>
+                    </div>
+                </div>
+                <div class="cat-card" onclick="openModal('modal3')">
+                    <img src="https://placehold.co/600x400/1e3a8a/white?text=💳+Credit+%26+Debit" alt="Credit">
+                    <div class="cat-card-body">
+                        <h3>💳 Credit & Debit Cards</h3>
+                        <p>Compare and review bank cards, rewards, and credit building tools.</p>
+                    </div>
+                </div>
+                <div class="cat-card" onclick="openModal('modal4')">
+                    <img src="https://placehold.co/600x400/ef4444/white?text=🎁+Gift+Card+Market" alt="Gift">
+                    <div class="cat-card-body">
+                        <h3>🎁 Gift Card Marketplace</h3>
+                        <p>Buy, sell, and exchange gift cards globally – safe & instant.</p>
+                    </div>
+                </div>
+                <div class="cat-card" onclick="openModal('modal5')">
+                    <img src="https://placehold.co/600x400/10b981/white?text=📇+Digital+Business+Cards" alt="Business">
+                    <div class="cat-card-body">
+                        <h3>📇 Digital Business Cards</h3>
+                        <p>NFC, QR, and vCard solutions for modern networking.</p>
+                    </div>
+                </div>
+                <div class="cat-card" onclick="openModal('modal6')">
+                    <img src="https://placehold.co/600x400/f59e0b/white?text=⭐+Loyalty+%26+Rewards" alt="Loyalty">
+                    <div class="cat-card-body">
+                        <h3>⭐ Loyalty & Rewards Hub</h3>
+                        <p>Track points, miles, and cashback – maximize every card.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Card 6 -->
-        <div class="cat-card" onclick="openModal('modal6')">
-          <img src="https://placehold.co/600x400/f59e0b/white?text=⭐+Loyalty+%26+Rewards" alt="Loyalty">
-          <div class="cat-card-body">
-            <h3>⭐ Loyalty & Rewards Hub</h3>
-            <p>Track points, miles, and cashback – maximize every card.</p>
-          </div>
+    </section>
+
+    <!-- Bottom Ad -->
+    <section class="bottom-ad">
+        <div class="container">
+            <h2>Ready to own Cardarise.com?</h2>
+            <p>This premium domain is waiting for a visionary. Secure it before someone else does.</p>
+            <a href="mailto:cccvcccv3@gmail.com" class="bottom-cta">📩 Inquire Now – cccvcccv3@gmail.com</a>
         </div>
-      </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Cardarise.com – All rights reserved. Domain for sale by owner.</p>
+    </footer>
+
+    <!-- Modals -->
+    <div class="modal-overlay" id="modal1">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal('modal1')">&times;</button>
+            <h2>🎮 Digital Game Store</h2>
+            <p>An instant digital delivery platform for all major gaming and entertainment credits.</p>
+            <div class="img-strip">
+                <img src="https://placehold.co/100x65/0070d1/white?text=PSN" alt="PSN">
+                <img src="https://placehold.co/100x65/107c10/white?text=Xbox" alt="Xbox">
+                <img src="https://placehold.co/100x65/000/white?text=Steam" alt="Steam">
+                <img src="https://placehold.co/100x65/f9ab00/white?text=GooglePlay" alt="Google">
+                <img src="https://placehold.co/100x65/555/white?text=Apple" alt="Apple">
+                <img src="https://placehold.co/100x65/e50914/white?text=Netflix" alt="Netflix">
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">⚡ Instant delivery</div>
+                <div class="feature-item">💱 Multi-currency</div>
+                <div class="feature-item">🔔 Price alerts</div>
+                <div class="feature-item">📱 PWA ready</div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- Bottom Ad Section -->
-  <section class="bottom-ad">
-    <div class="container">
-      <h2>Ready to own Cardarise.com?</h2>
-      <p>This premium domain is waiting for a visionary. Secure it before someone else does.</p>
-      <a href="mailto:cccvcccv3@gmail.com" class="bottom-cta">📩 Inquire Now – cccvcccv3@gmail.com</a>
+    <div class="modal-overlay" id="modal2">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal('modal2')">&times;</button>
+            <h2>🃏 Trading Card Games Hub</h2>
+            <p>A complete ecosystem for TCG enthusiasts – shop, tier lists, deck builder, and price tracking.</p>
+            <div class="img-strip">
+                <img src="https://placehold.co/100x65/8b5a2b/white?text=Booster" alt="Booster">
+                <img src="https://placehold.co/100x65/d4af37/white?text=Rare" alt="Rare">
+                <img src="https://placehold.co/100x65/2e4a62/white?text=Tier" alt="Tier">
+                <img src="https://placehold.co/100x65/3a2e1f/white?text=Deck" alt="Deck">
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">🃏 Singles & Packs</div>
+                <div class="feature-item">📊 Live Tier List</div>
+                <div class="feature-item">🛠️ Deck Builder</div>
+                <div class="feature-item">💰 Price Tracker</div>
+                <div class="feature-item">🌐 Community</div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <footer>
-    <p>© 2025 Cardarise.com – All rights reserved. Domain for sale by owner.</p>
-  </footer>
-
-  <!-- Modals -->
-  <div class="modal-overlay" id="modal1">
-    <div class="modal">
-      <button class="close-btn" onclick="closeModal('modal1')">&times;</button>
-      <h2>🎮 Digital Game Store</h2>
-      <p>An instant digital delivery platform for all major gaming and entertainment credits.</p>
-      <div class="img-strip">
-        <img src="https://placehold.co/100x65/0070d1/white?text=PSN" alt="PSN">
-        <img src="https://placehold.co/100x65/107c10/white?text=Xbox" alt="Xbox">
-        <img src="https://placehold.co/100x65/000/white?text=Steam" alt="Steam">
-        <img src="https://placehold.co/100x65/f9ab00/white?text=GooglePlay" alt="Google">
-        <img src="https://placehold.co/100x65/555/white?text=Apple" alt="Apple">
-        <img src="https://placehold.co/100x65/e50914/white?text=Netflix" alt="Netflix">
-      </div>
-      <div class="feature-grid">
-        <div class="feature-item">⚡ Instant delivery</div>
-        <div class="feature-item">💱 Multi-currency</div>
-        <div class="feature-item">🔔 Price alerts</div>
-        <div class="feature-item">📱 PWA ready</div>
-      </div>
+    <div class="modal-overlay" id="modal3">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal('modal3')">&times;</button>
+            <h2>💳 Credit & Debit Cards</h2>
+            <p>Compare the best credit and debit cards, rewards, and credit building resources.</p>
+            <div class="img-strip">
+                <img src="https://placehold.co/100x65/1a1a2e/white?text=Visa" alt="Visa">
+                <img src="https://placehold.co/100x65/eb001b/white?text=MC" alt="Mastercard">
+                <img src="https://placehold.co/100x65/006fcf/white?text=Amex" alt="Amex">
+                <img src="https://placehold.co/100x65/333/white?text=Cashback" alt="Cashback">
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">📋 Comparisons</div>
+                <div class="feature-item">⭐ Rewards Calc</div>
+                <div class="feature-item">📈 Credit Building</div>
+                <div class="feature-item">🔒 Safe Reviews</div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="modal-overlay" id="modal2">
-    <div class="modal">
-      <button class="close-btn" onclick="closeModal('modal2')">&times;</button>
-      <h2>🃏 Trading Card Games Hub</h2>
-      <p>A complete ecosystem for TCG enthusiasts – shop, tier lists, deck builder, and price tracking.</p>
-      <div class="img-strip">
-        <img src="https://placehold.co/100x65/8b5a2b/white?text=Booster" alt="Booster">
-        <img src="https://placehold.co/100x65/d4af37/white?text=Rare" alt="Rare">
-        <img src="https://placehold.co/100x65/2e4a62/white?text=Tier" alt="Tier">
-        <img src="https://placehold.co/100x65/3a2e1f/white?text=Deck" alt="Deck">
-      </div>
-      <div class="feature-grid">
-        <div class="feature-item">🃏 Singles & Packs</div>
-        <div class="feature-item">📊 Live Tier List</div>
-        <div class="feature-item">🛠️ Deck Builder</div>
-        <div class="feature-item">💰 Price Tracker</div>
-        <div class="feature-item">🌐 Community</div>
-      </div>
+    <div class="modal-overlay" id="modal4">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal('modal4')">&times;</button>
+            <h2>🎁 Gift Card Marketplace</h2>
+            <p>Peer-to-peer exchange with escrow protection and best rate guarantee.</p>
+            <div class="img-strip">
+                <img src="https://placehold.co/100x65/ff9900/white?text=Amazon" alt="Amazon">
+                <img src="https://placehold.co/100x65/00a8e1/white?text=Target" alt="Target">
+                <img src="https://placehold.co/100x65/db4437/white?text=Google" alt="Google">
+                <img src="https://placehold.co/100x65/000/white?text=eBay" alt="eBay">
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">🔄 Instant Trade</div>
+                <div class="feature-item">💲 Best Rates</div>
+                <div class="feature-item">🌍 Global</div>
+                <div class="feature-item">🛡️ Escrow</div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="modal-overlay" id="modal3">
-    <div class="modal">
-      <button class="close-btn" onclick="closeModal('modal3')">&times;</button>
-      <h2>💳 Credit & Debit Cards</h2>
-      <p>Compare the best credit and debit cards, rewards, and credit building resources.</p>
-      <div class="img-strip">
-        <img src="https://placehold.co/100x65/1a1a2e/white?text=Visa" alt="Visa">
-        <img src="https://placehold.co/100x65/eb001b/white?text=MC" alt="Mastercard">
-        <img src="https://placehold.co/100x65/006fcf/white?text=Amex" alt="Amex">
-        <img src="https://placehold.co/100x65/333/white?text=Cashback" alt="Cashback">
-      </div>
-      <div class="feature-grid">
-        <div class="feature-item">📋 Comparisons</div>
-        <div class="feature-item">⭐ Rewards Calc</div>
-        <div class="feature-item">📈 Credit Building</div>
-        <div class="feature-item">🔒 Safe Reviews</div>
-      </div>
+    <div class="modal-overlay" id="modal5">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal('modal5')">&times;</button>
+            <h2>📇 Digital Business Cards</h2>
+            <p>Modern networking with NFC, QR codes, and virtual cards – all under one roof.</p>
+            <div class="img-strip">
+                <img src="https://placehold.co/100x65/0d9488/white?text=NFC" alt="NFC">
+                <img src="https://placehold.co/100x65/0284c7/white?text=QR" alt="QR">
+                <img src="https://placehold.co/100x65/8b5cf6/white?text=vCard" alt="vCard">
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">📱 Tap & Share</div>
+                <div class="feature-item">🎨 Custom Design</div>
+                <div class="feature-item">🔗 Analytics</div>
+                <div class="feature-item">🔐 CRM Sync</div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="modal-overlay" id="modal4">
-    <div class="modal">
-      <button class="close-btn" onclick="closeModal('modal4')">&times;</button>
-      <h2>🎁 Gift Card Marketplace</h2>
-      <p>Peer-to-peer exchange with escrow protection and best rate guarantee.</p>
-      <div class="img-strip">
-        <img src="https://placehold.co/100x65/ff9900/white?text=Amazon" alt="Amazon">
-        <img src="https://placehold.co/100x65/00a8e1/white?text=Target" alt="Target">
-        <img src="https://placehold.co/100x65/db4437/white?text=Google" alt="Google">
-        <img src="https://placehold.co/100x65/000/white?text=eBay" alt="eBay">
-      </div>
-      <div class="feature-grid">
-        <div class="feature-item">🔄 Instant Trade</div>
-        <div class="feature-item">💲 Best Rates</div>
-        <div class="feature-item">🌍 Global</div>
-        <div class="feature-item">🛡️ Escrow</div>
-      </div>
+    <div class="modal-overlay" id="modal6">
+        <div class="modal">
+            <button class="close-btn" onclick="closeModal('modal6')">&times;</button>
+            <h2>⭐ Loyalty & Rewards Maximizer</h2>
+            <p>Unify all your loyalty points, travel miles, and cashback in a smart dashboard.</p>
+            <div class="img-strip">
+                <img src="https://placehold.co/100x65/f59e0b/white?text=Points" alt="Points">
+                <img src="https://placehold.co/100x65/3b82f6/white?text=Miles" alt="Miles">
+                <img src="https://placehold.co/100x65/10b981/white?text=Cashback" alt="Cashback">
+            </div>
+            <div class="feature-grid">
+                <div class="feature-item">📊 Unified View</div>
+                <div class="feature-item">✈️ Travel Optimizer</div>
+                <div class="feature-item">🔔 Expiry Alerts</div>
+                <div class="feature-item">🏆 Gamification</div>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div class="modal-overlay" id="modal5">
-    <div class="modal">
-      <button class="close-btn" onclick="closeModal('modal5')">&times;</button>
-      <h2>📇 Digital Business Cards</h2>
-      <p>Modern networking with NFC, QR codes, and virtual cards – all under one roof.</p>
-      <div class="img-strip">
-        <img src="https://placehold.co/100x65/0d9488/white?text=NFC" alt="NFC">
-        <img src="https://placehold.co/100x65/0284c7/white?text=QR" alt="QR">
-        <img src="https://placehold.co/100x65/8b5cf6/white?text=vCard" alt="vCard">
-      </div>
-      <div class="feature-grid">
-        <div class="feature-item">📱 Tap & Share</div>
-        <div class="feature-item">🎨 Custom Design</div>
-        <div class="feature-item">🔗 Analytics</div>
-        <div class="feature-item">🔐 CRM Sync</div>
-      </div>
-    </div>
-  </div>
+    <script>
+        // Language switcher (demonstration – you can extend to actually translate content)
+        document.getElementById('languageSelect').addEventListener('change', function(e) {
+            const lang = e.target.value;
+            alert(`Language selected: ${lang}. (Full translation can be implemented for a live site.)`);
+            // Here you could redirect or dynamically load translations
+        });
 
-  <div class="modal-overlay" id="modal6">
-    <div class="modal">
-      <button class="close-btn" onclick="closeModal('modal6')">&times;</button>
-      <h2>⭐ Loyalty & Rewards Maximizer</h2>
-      <p>Unify all your loyalty points, travel miles, and cashback in a smart dashboard.</p>
-      <div class="img-strip">
-        <img src="https://placehold.co/100x65/f59e0b/white?text=Points" alt="Points">
-        <img src="https://placehold.co/100x65/3b82f6/white?text=Miles" alt="Miles">
-        <img src="https://placehold.co/100x65/10b981/white?text=Cashback" alt="Cashback">
-      </div>
-      <div class="feature-grid">
-        <div class="feature-item">📊 Unified View</div>
-        <div class="feature-item">✈️ Travel Optimizer</div>
-        <div class="feature-item">🔔 Expiry Alerts</div>
-        <div class="feature-item">🏆 Gamification</div>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    function openModal(id) {
-      document.getElementById(id).style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
-    function closeModal(id) {
-      document.getElementById(id).style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
-    window.addEventListener('click', function(e) {
-      if (e.target.classList.contains('modal-overlay')) {
-        e.target.style.display = 'none';
-        document.body.style.overflow = 'auto';
-      }
-    });
-  </script>
+        // Modal functions
+        function openModal(id) {
+            document.getElementById(id).style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        window.addEventListener('click', function(e) {
+            if (e.target.classList.contains('modal-overlay')) {
+                e.target.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 </body>
 </html>

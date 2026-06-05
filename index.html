@@ -26,101 +26,88 @@
             overflow-x: hidden;
         }
 
-        /* ---------- TOP ADVERTISEMENT BAR ---------- */
+        /* ---------- COMPACT TOP AD BAR ---------- */
         .top-ad-bar {
-            background: linear-gradient(135deg, #f59e0b, #d97706);
-            color: #0f172a;
-            padding: 12px 24px;
+            background: #1e293b;
+            color: #f1f5f9;
             display: flex;
             align-items: center;
-            justify-content: space-between;
+            justify-content: center;
             flex-wrap: wrap;
-            gap: 15px;
-            font-weight: 600;
-            font-size: 0.95rem;
-            border-bottom: 2px solid rgba(255,255,255,0.2);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            gap: 18px;
+            padding: 8px 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            border-bottom: 1px solid #334155;
         }
 
         .ad-offer {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
             flex-wrap: wrap;
+            justify-content: center;
         }
 
-        .ad-offer span {
-            background: rgba(255,255,255,0.25);
-            padding: 6px 18px;
-            border-radius: 30px;
-            font-weight: 700;
-            backdrop-filter: blur(5px);
+        .ad-offer a {
+            color: #facc15;
+            text-decoration: underline;
+            font-weight: 600;
         }
 
         .buy-godaddy-btn {
-            background: #ffffff;
-            color: #b45309;
-            padding: 10px 24px;
-            border-radius: 30px;
+            background: #facc15;
+            color: #0f172a;
+            padding: 6px 16px;
+            border-radius: 20px;
             text-decoration: none;
             font-weight: 700;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-            transition: all 0.3s;
-            display: inline-block;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+            white-space: nowrap;
         }
 
         .buy-godaddy-btn:hover {
-            background: #ffedd5;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            background: #fbbf24;
         }
 
         .language-selector {
             display: flex;
             align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 30px;
-            padding: 6px 12px;
-            backdrop-filter: blur(5px);
+            gap: 6px;
+            background: rgba(255,255,255,0.1);
+            padding: 4px 10px;
+            border-radius: 20px;
         }
 
         .language-selector select {
             background: transparent;
             border: none;
-            color: #0f172a;
-            font-weight: 600;
-            font-size: 0.9rem;
+            color: #f1f5f9;
+            font-weight: 500;
+            font-size: 0.85rem;
             outline: none;
             cursor: pointer;
             font-family: 'Inter', sans-serif;
         }
 
         .language-selector select option {
-            background: white;
-            color: #0f172a;
+            background: #1e293b;
+            color: #f1f5f9;
         }
 
-        /* ---------- STICKY HEADER ---------- */
-        .sticky-header {
-            position: sticky;
-            top: 0;
-            z-index: 999;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            padding: 0 24px;
+        /* ---------- HEADER (clean, no CTA) ---------- */
+        .site-header {
+            padding: 18px 24px;
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 70px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            justify-content: center;
+            background: white;
+            border-bottom: 1px solid #f1f5f9;
         }
 
         .logo {
             font-family: 'Space Grotesk', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 700;
             background: linear-gradient(135deg, #3b82f6, #8b5cf6);
             -webkit-background-clip: text;
@@ -133,29 +120,10 @@
             -webkit-text-fill-color: #94a3b8;
         }
 
-        .header-cta {
-            background: linear-gradient(135deg, #3b82f6, #2563eb);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 40px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            text-decoration: none;
-            transition: all 0.3s;
-            box-shadow: 0 10px 25px rgba(59,130,246,0.25);
-            letter-spacing: 0.3px;
-            white-space: nowrap;
-        }
-
-        .header-cta:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 35px rgba(59,130,246,0.4);
-        }
-
-        /* ---------- HERO ---------- */
+        /* ---------- HERO (just branding, no CTA) ---------- */
         .hero {
             background: radial-gradient(circle at 20% 30%, #f0f4ff, #ffffff);
-            padding: 80px 24px 70px;
+            padding: 70px 24px 60px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -166,7 +134,7 @@
             position: absolute;
             width: 500px;
             height: 500px;
-            background: radial-gradient(circle, rgba(139,92,246,0.08) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(139,92,246,0.06) 0%, transparent 70%);
             top: -100px;
             left: -150px;
             border-radius: 50%;
@@ -174,7 +142,7 @@
         }
 
         .hero .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             position: relative;
             z-index: 1;
@@ -188,7 +156,7 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
             line-height: 1.2;
         }
 
@@ -204,7 +172,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
-            margin: 25px 0;
+            margin: 25px 0 15px;
         }
 
         .badge {
@@ -216,27 +184,6 @@
             font-size: 0.9rem;
             color: #334155;
             box-shadow: 0 5px 15px rgba(0,0,0,0.02);
-        }
-
-        .hero-cta {
-            display: inline-block;
-            margin-top: 20px;
-            background: linear-gradient(135deg, #f97316, #ef4444);
-            color: white;
-            padding: 16px 38px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.15rem;
-            text-decoration: none;
-            box-shadow: 0 15px 35px rgba(249,115,22,0.3);
-            transition: all 0.3s;
-            border: none;
-            letter-spacing: 0.5px;
-        }
-
-        .hero-cta:hover {
-            transform: scale(1.03);
-            box-shadow: 0 20px 45px rgba(239,68,68,0.4);
         }
 
         /* ---------- SECTIONS ---------- */
@@ -398,44 +345,7 @@
             border: 1px solid #f1f5f9;
         }
 
-        /* ---------- BOTTOM AD ---------- */
-        .bottom-ad {
-            background: linear-gradient(135deg, #f8fafc, #eff6ff);
-            padding: 60px 24px;
-            text-align: center;
-        }
-
-        .bottom-ad h2 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 2rem;
-            margin-bottom: 15px;
-        }
-
-        .bottom-ad p {
-            font-size: 1.1rem;
-            color: #475569;
-            max-width: 500px;
-            margin: 0 auto 25px;
-        }
-
-        .bottom-cta {
-            display: inline-block;
-            background: #3b82f6;
-            color: white;
-            padding: 16px 42px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            text-decoration: none;
-            transition: 0.3s;
-            box-shadow: 0 15px 35px rgba(59,130,246,0.25);
-        }
-
-        .bottom-cta:hover {
-            background: #2563eb;
-            transform: scale(1.04);
-        }
-
+        /* ---------- FOOTER ---------- */
         footer {
             background: white;
             border-top: 1px solid #f1f5f9;
@@ -445,18 +355,11 @@
             font-size: 0.9rem;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 600px) {
             .top-ad-bar {
                 flex-direction: column;
+                gap: 10px;
                 text-align: center;
-                gap: 12px;
-            }
-            .ad-offer {
-                justify-content: center;
-            }
-            .language-selector {
-                width: 100%;
-                justify-content: center;
             }
             .hero h1 {
                 font-size: 2.5rem;
@@ -465,36 +368,35 @@
     </style>
 </head>
 <body>
-    <!-- 🌟 TOP ADVERTISEMENT BAR with Buy on GoDaddy + Offer + Language Switcher -->
+    <!-- 🌟 SINGLE COMPACT AD BAR with GoDaddy Buy + Offer + Language -->
     <div class="top-ad-bar">
         <div class="ad-offer">
             <span>🔥 Domain For Sale</span>
             <a href="https://www.godaddy.com/domainsearch/find?checkAvail=1&domainToCheck=cardarise.com" target="_blank" class="buy-godaddy-btn">🛒 Buy on GoDaddy</a>
         </div>
         <div class="ad-offer">
-            <span>💎 Make Your Offer: <a href="mailto:cccvcccv3@gmail.com" style="color:#0f172a; text-decoration:underline;">cccvcccv3@gmail.com</a></span>
+            <span>📩 <a href="mailto:cccvcccv3@gmail.com">cccvcccv3@gmail.com</a></span>
         </div>
         <div class="language-selector">
             🌐
             <select id="languageSelect" aria-label="Change language">
-                <option value="en" data-flag="🇬🇧">🇬🇧 English</option>
-                <option value="ja" data-flag="🇯🇵">🇯🇵 日本語</option>
-                <option value="fr" data-flag="🇫🇷">🇫🇷 Français</option>
-                <option value="de" data-flag="🇩🇪">🇩🇪 Deutsch</option>
-                <option value="ko" data-flag="🇰🇷">🇰🇷 한국어</option>
-                <option value="zh" data-flag="🇨🇳">🇨🇳 中文</option>
-                <option value="ar" data-flag="🇸🇦">🇸🇦 العربية</option>
+                <option value="en">🇬🇧 English</option>
+                <option value="ja">🇯🇵 日本語</option>
+                <option value="fr">🇫🇷 Français</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="ko">🇰🇷 한국어</option>
+                <option value="zh">🇨🇳 中文</option>
+                <option value="ar">🇸🇦 العربية</option>
             </select>
         </div>
     </div>
 
-    <!-- Sticky Header -->
-    <header class="sticky-header">
+    <!-- Clean header, logo only -->
+    <header class="site-header">
         <div class="logo">Cardarise<span>.com</span></div>
-        <a href="mailto:cccvcccv3@gmail.com" class="header-cta">🚀 Make an Offer</a>
     </header>
 
-    <!-- Hero -->
+    <!-- Hero – pure branding, no extra CTA -->
     <section class="hero">
         <div class="container">
             <h1>Cardarise.com</h1>
@@ -507,8 +409,6 @@
                 <span class="badge">📇 Digital Business Cards</span>
                 <span class="badge">⭐ Loyalty & Rewards</span>
             </div>
-            <a href="mailto:cccvcccv3@gmail.com" class="hero-cta">📧 Submit Your Offer Now</a>
-            <p style="margin-top:15px; color:#64748b; font-size:0.9rem;">Serious inquiries only • cccvcccv3@gmail.com</p>
         </div>
     </section>
 
@@ -564,20 +464,12 @@
         </div>
     </section>
 
-    <!-- Bottom Ad -->
-    <section class="bottom-ad">
-        <div class="container">
-            <h2>Ready to own Cardarise.com?</h2>
-            <p>This premium domain is waiting for a visionary. Secure it before someone else does.</p>
-            <a href="mailto:cccvcccv3@gmail.com" class="bottom-cta">📩 Inquire Now – cccvcccv3@gmail.com</a>
-        </div>
-    </section>
-
+    <!-- Footer – simple and clean -->
     <footer>
         <p>© 2025 Cardarise.com – All rights reserved. Domain for sale by owner.</p>
     </footer>
 
-    <!-- Modals -->
+    <!-- Modals (unchanged) -->
     <div class="modal-overlay" id="modal1">
         <div class="modal">
             <button class="close-btn" onclick="closeModal('modal1')">&times;</button>
@@ -700,11 +592,10 @@
     </div>
 
     <script>
-        // Language switcher (demonstration – you can extend to actually translate content)
+        // Language switcher demonstration
         document.getElementById('languageSelect').addEventListener('change', function(e) {
             const lang = e.target.value;
-            alert(`Language selected: ${lang}. (Full translation can be implemented for a live site.)`);
-            // Here you could redirect or dynamically load translations
+            alert(`Language selected: ${lang}. (Full translation would be applied here.)`);
         });
 
         // Modal functions
